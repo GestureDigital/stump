@@ -1,0 +1,9 @@
+/vendor/
+/wordpress/
+/node_modules
+/vendor
+/public/*
+!/public/.gitkeep
+.env
+npm-debug.log
+.DS_Store

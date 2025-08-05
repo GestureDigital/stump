@@ -1,0 +1,55 @@
+{% block html_head_container %}
+
+{% include 'partials/html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="mb-4 py-12 {{body_class}}" data-template="base.twig">
+		{{ function('wp_body_open') }}
+		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
+		<header class="header" >
+			{% block header %}
+				<div class="wrapper">
+					<h1 class="hdr-logo" role="banner">
+						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+						<img src="{{ vite_asset('resources/images/logo-1.png') }}" alt="Logo">
+						{{ vite_svg('resources/images/facebook.svg', {
+						  class: 'h-6 w-6 fill-current',
+						  role: 'img',
+						  'aria-hidden': 'true'
+						}) }}
+						
+						{# Or simple: #}
+						{{ vite_svg('resources/images/facebook.svg') }}
+					</h1>
+					<nav id="nav-main" class="nav-main" role="navigation">
+						{% include "partials/menu.twig" with {'items': menu.get_items} %}
+					</nav><!-- #nav -->
+				</div>
+			{% endblock %}
+		</header>
+
+		<section id="content" role="main" class="content-wrapper">
+			{% if title %}<h1>{{title}}</h1>{% endif %}
+			<div class="wrapper">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+			</div>
+			{% if sidebar %}
+				<aside class="layout-sidebar">
+					{{sidebar}}
+				</aside>
+			{% endif %}
+		</section>
+
+		{% block footer %}
+			<footer id="footer">
+				{% include 'sections/footer.twig' %}
+			</footer>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>

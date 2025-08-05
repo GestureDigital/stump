@@ -1,0 +1,13 @@
+## Team
+
+Your name or company
+https://yoursite.example
+@your_twitter_handle
+
+
+## Site
+
+Software: 
+[Timber](https://upstatement.com/timber/) by Upstatement
+[Tailwind] (https://tailwindcss.com/)
+[Vite] (https://vitejs.dev/)
