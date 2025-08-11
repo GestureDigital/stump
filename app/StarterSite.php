@@ -237,7 +237,7 @@ class StarterSite extends Site {
 	 */
 	 
 	public function acf_json_save_point( $path ) {
-		return get_stylesheet_directory() . '/src/acf-json';
+		return get_stylesheet_directory() . '/resources/acf-json';
 	}
 	
 	public function acf_json_load_point( $paths ) {
@@ -245,7 +245,7 @@ class StarterSite extends Site {
 		unset($paths[0]);
 	
 		// Append the new path and return it.
-		$paths[] = get_stylesheet_directory() . '/src/acf-json';
+		$paths[] = get_stylesheet_directory() . '/resources/acf-json';
 	
 		return $paths;    
 	}
