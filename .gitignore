@@ -3,8 +3,10 @@
 /node_modules
 /vendor
 /public/*
+!/public/
 !/public/.gitkeep
 /public/build/*
+!/public/build/
 !/public/build/.gitkeep
 .env
 npm-debug.log
