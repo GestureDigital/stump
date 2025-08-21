@@ -55,6 +55,8 @@ class StarterSite extends Site {
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
 		$context['menu']  = Timber::get_menu();
 		$context['site']  = $this;
+		//Add ACF options to global context
+		$context['options'] = get_fields('option');
 
 		return $context;
 	}
