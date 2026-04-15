@@ -29,7 +29,7 @@
         "automattic/wordbless"
       ]
     },
-    "wordpress-install-dir": "wordpress"
+    "wordpress-install-dir": "../../../"
   },
   "config": {
     "allow-plugins": {
